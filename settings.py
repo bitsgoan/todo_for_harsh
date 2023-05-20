@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)onu4-r!r3iyxh^(p*25e%ek$!ajn8kl5ono40u7-67sa&za8g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', '.vercel.app']
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
@@ -81,15 +81,10 @@ WSGI_APPLICATION = 'todo_harsh.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'b7tYrJmWleyDO64wvmDP',
-        'HOST': 'containers-us-west-179.railway.app',
-        'PORT': '6788',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
