@@ -1,1 +1,3 @@
-# todo_for_harsh
+README
+
+Simple App for a basic Todo app use
